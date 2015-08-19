@@ -91,18 +91,20 @@
         "Jelly Bean Ice Cream",
         "Brussels Sprouts and Egg Salad with Hazelnuts"
       ]
+
       var goodDishes = [];
       var badDishes = [];
 
-      dishes.forEach(function(dish) {
-        if (dish.includes("Brussels Sprouts")) {
-          console.log(dish + ": This contains the vegetable that we need.");
-          goodDishes.push(dish);
+      for (var i = 0; i < dishes.length; i++) {
+        if (/Brussels/.test(dishes[i])){
+          console.log(dishes[i] + ": This contains the vegetable that we need.")
+          goodDishes.push(dishes[i]);
         } else {
-          console.log(dish + ": We dont' care for this dish.");
-          badDishes.push(dish);
+          console.log(dishes[i] + ": We don't care for this dish.")
+          badDishes.push(dishes[i]);
         }
-      });
+      }
+
 
     </script>
   </body>
